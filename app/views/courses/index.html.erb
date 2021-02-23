@@ -1,0 +1,12 @@
+<h1>Courses#index</h1>
+
+<table>
+  <%# binding.pry %>
+  <% @courses.each do |course| %>
+    <tr>
+    <td>
+      Name: <%= course.title %> | <%=link_to 'Show', course_path(course)%> <br><br>
+    </td>
+    </tr>
+  <% end %>
+</table>

@@ -1,0 +1,17 @@
+
+<div>
+  Title: <%= @course.title %><br>
+  Description: <%= @course.description %><br>
+</div>
+<br>
+<%# binding.pry %>
+<%= link_to 'add lecture', new_course_lecture_path(@course)%>
+<br>
+<br>
+<% @course.blocks.each  do |lec| %>
+	<div>
+		<%= lec.title %>
+	</div>
+	<br>
+
+<%end%>
